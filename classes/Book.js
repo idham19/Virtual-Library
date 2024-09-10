@@ -22,6 +22,14 @@ summary(){
   return bookHighRate;
  }
 
+ static calculateAverageRating(book){
+    let ratingOfAllBook=0;
+    for(let i=0;i< book.length;i++){
+      ratingOfAllBook+=book[i].rating;
+    }
+    let avg = ratingOfAllBook/book.length;
+    return avg;
+ }
 }
 // don't change below
 module.exports = Book;

@@ -26,6 +26,15 @@ class Movie extends Media {
     }
     return longestMovieDuration;
   }
+
+  static calculateAverageRating(movie){
+    let ratingOfAllBook=0;
+    for(let i=0;i< movie.length;i++){
+      ratingOfAllBook+=movie[i].rating;
+    }
+    let avg = ratingOfAllBook/movie.length;
+    return avg;
+ }
 }
 // don't change below
 module.exports = Movie;

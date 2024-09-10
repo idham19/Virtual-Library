@@ -12,7 +12,15 @@ constructor(title,year,genre,author,numPages,rating){
 summary(){
     return `Title: ${this.title}, Author: ${this.author}, Year: ${this.year}, Page Count: ${this.numPages}, Genre: ${this.genre}, Rating: ${this.rating}`
 }
-
+ static highestRating(book){
+  let bookHighRate=book[0]
+  for(let i=0;i<book.length;i++){
+   if(book[i].rating> bookHighRate.rating){
+    bookHighRate=book[i];
+   }
+  }
+  return bookHighRate;
+ }
 
 }
 // don't change below
